@@ -1,5 +1,4 @@
 import Controller from '@ember/controller';
-import { next } from '@ember/runloop';
 import EmberObject, { computed } from '@ember/object';
 
 export default Controller.extend({
@@ -20,22 +19,17 @@ export default Controller.extend({
 
       let elem = document.querySelector('#new-contact-modal');
       M.Modal.getInstance(elem).open();
-
-      // XXX: Materialize recommends this in case inputs are prefilled, in order
-      // to activate labels properly.
-      next(() => M.updateTextFields());
     },
 
-    save() {
-      let info = this.get('contactInfo');
+    save(data) {
       let url = "https://reqres.in/api/users";
-      if (info.id) {
-        url += `/${info.id}`;
+      if (data.id) {
+        url += `/${data.id}`;
       }
 
       fetch(url, {
-        method: info.id ? 'PUT' : 'POST',
-        body: JSON.stringify(info),
+        method: data.id ? 'PUT' : 'POST',
+        body: JSON.stringify(data),
       }).then(() => {
         let elem = document.querySelector('#new-contact-modal');
         M.Modal.getInstance(elem).close();

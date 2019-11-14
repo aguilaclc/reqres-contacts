@@ -3,7 +3,7 @@ import Component from '@ember/component';
 export default Component.extend({
   actions: {
     onOpenEnd() {
-      document.querySelector(`#${this.id} input[autofocus]`).focus();
+      document.querySelector(`#${this.elementId} input[autofocus]`).focus();
 
       if (this.onOpenEnd) {
         this.onOpenEnd();
@@ -34,12 +34,12 @@ export default Component.extend({
       },
     };
 
-    let elem = document.querySelector(`#${this.id}`);
+    let elem = document.querySelector(`#${this.elementId}`);
     M.Modal.init(elem, options);
   },
 
   willDestroyElement() {
-    let elem = document.querySelector(`#${this.id}`);
+    let elem = document.querySelector(`#${this.elementId}`);
     let modal = M.Modal.getInstance(elem);
 
     if (modal.isOpen) {

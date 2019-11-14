@@ -32,6 +32,4 @@
   </div>
 </div>
 
-<Modal @id="new-contact-modal">
-  {{partial "form-modal"}}
-</Modal>
+<ContactForm @data={{contactInfo}} @saveAction={{action "save"}}/>
