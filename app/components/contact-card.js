@@ -1,8 +1,6 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['contact-card', 'col', 's12', 'm6', 'l4', 'xl3'],
-
   actions: {
     click() {
       this.clickAction(...arguments);
@@ -16,4 +14,6 @@ export default Component.extend({
       this.editAction(...arguments);
     },
   },
+
+  classNames: ['contact-card', 'col', 's12', 'm6', 'l4', 'xl3'],
 });

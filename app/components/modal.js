@@ -2,17 +2,17 @@ import Component from '@ember/component';
 
 export default Component.extend({
   actions: {
+    onCloseEnd() {
+      if (this.onCloseEnd) {
+        this.onCloseEnd();
+      }
+    },
+
     onOpenEnd() {
       document.querySelector(`#${this.elementId} input[autofocus]`).focus();
 
       if (this.onOpenEnd) {
         this.onOpenEnd();
-      }
-    },
-
-    onCloseEnd() {
-      if (this.onCloseEnd) {
-        this.onCloseEnd();
       }
     },
   },
