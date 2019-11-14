@@ -1,26 +1,28 @@
 <div class="modal-content">
   <h4>{{if contactInfo.id "Edit" "Create"}} contact</h4>
 
-  <div class="input-field col s6">
-    {{input id="first_name"
-            type="text"
-            autofocus=true
-            value=contactInfo.first_name}}
-    <label for="first_name">First Name</label>
-  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      {{input id="first_name"
+              type="text"
+              autofocus=true
+              value=contactInfo.first_name}}
+      <label for="first_name">First Name</label>
+    </div>
 
-  <div class="input-field col s12">
-    {{input id="last_name"
-            type="text"
-            value=contactInfo.last_name}}
-    <label for="last_name">Last Name</label>
-  </div>
+    <div class="input-field col s6">
+      {{input id="last_name"
+              type="text"
+              value=contactInfo.last_name}}
+      <label for="last_name">Last Name</label>
+    </div>
 
-  <div class="input-field col s6">
-    {{input id="email"
-            type="text"
-            value=contactInfo.email}}
-    <label for="email">E-mail</label>
+    <div class="input-field col s12">
+      {{input id="email"
+              type="text"
+              value=contactInfo.email}}
+      <label for="email">E-mail</label>
+    </div>
   </div>
 </div>
 
