@@ -20,6 +20,26 @@ export default Controller.extend({
       next(() => M.updateTextFields());
     },
 
+    save() {
+      let info = this.get('contactInfo');
+      let url = "https://reqres.in/api/users";
+      if (info.id) {
+        url += `/${info.id}`;
+      }
+
+      fetch(url, {
+        method: info.id ? 'PUT' : 'POST',
+        body: JSON.stringify(info),
+      }).then(payload => {
+        let elem = document.querySelector('#new-contact-modal');
+        M.Modal.getInstance(elem).close();
+
+        M.toast({ html: 'Saved!' });
+      }).catch(() => {
+        M.toast({ html: 'An error has ocurred' });
+      });
+    },
+
     showDetails(contact) {
       this.transitionToRoute('show', contact.id);
     },
