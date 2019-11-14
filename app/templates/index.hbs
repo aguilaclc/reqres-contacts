@@ -12,7 +12,8 @@
 
 <div class="row">
   {{#each model.data as |contact|}}
-    <ContactCard @contact={{contact}}
+    <ContactCard class="col s12 m6 l4 xl3"
+                 @contact={{contact}}
                  @clickAction={{action "showDetails"}}
                  @deleteAction={{action "deleteContact"}}
                  @editAction={{action "openContactModal"}} />

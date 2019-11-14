@@ -15,5 +15,5 @@ export default Component.extend({
     },
   },
 
-  classNames: ['contact-card', 'col', 's12', 'm6', 'l4', 'xl3'],
+  classNames: ['contact-card'],
 });
