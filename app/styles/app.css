@@ -1,6 +1,11 @@
+.contact-card .card-action a {
+  margin: 0 !important;
+}
+
 .contact-card i.material-icons {
   color: black;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .btn-flat:hover {
