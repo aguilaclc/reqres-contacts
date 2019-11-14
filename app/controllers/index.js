@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import { next } from '@ember/runloop';
 import EmberObject, { computed } from '@ember/object';
 
 export default Controller.extend({
@@ -9,7 +10,14 @@ export default Controller.extend({
 
     openContactModal(contact) {
       let contactInfo = EmberObject.create(contact);
-      console.log(contactInfo)
+      this.set('contactInfo', contactInfo);
+
+      let elem = document.querySelector('#new-contact-modal');
+      M.Modal.getInstance(elem).open();
+
+      // XXX: Materialize recommends this in case inputs are prefilled, in order
+      // to activate labels properly.
+      next(() => M.updateTextFields());
     },
 
     showDetails(contact) {
