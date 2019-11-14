@@ -17,3 +17,16 @@
                    editAction=(action "openContactModal")}}
   {{/each}}
 </div>
+
+<div class="row">
+  <div class="col s12 center-align">
+    <h6>Showing {{model.data.length}} of {{model.total}}</h6>
+  </div>
+
+  <div class="col s12 center-align">
+    <a class="waves-effect waves-teal btn-flat {{unless hasMorePages "disabled"}}"
+       {{action "loadNextPage"}}>
+      Show more
+    </a>
+  </div>
+</div>
