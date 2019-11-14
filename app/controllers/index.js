@@ -5,7 +5,13 @@ import EmberObject, { computed } from '@ember/object';
 export default Controller.extend({
   actions: {
     deleteContact(contact) {
-      // call DELETE endpoint
+      let url = `https://reqres.in/api/users/${contact.id}`;
+
+      fetch(url, { method: 'DELETE' }).then(payload => {
+        M.toast({ html: 'Deleted!' });
+      }).catch(() => {
+        M.toast({ html: 'An error has ocurred' });
+      });
     },
 
     openContactModal(contact) {
