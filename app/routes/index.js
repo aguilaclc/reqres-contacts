@@ -16,7 +16,7 @@ export default Route.extend({
     return this.fetchPage();
   },
 
-  setupController(controller, model) {
+  setupController(controller) {
     controller.set('fetchPage', this.fetchPage);
     this._super(...arguments);
   },

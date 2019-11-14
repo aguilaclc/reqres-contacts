@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col s2">
-    <h3 class="btn-large btn-flat" {{action 'goBack'}}>
+    <h3 class="btn-large btn-flat" {{action "goBack"}}>
       <MaterialIcon @name="arrow_back" />
     </h3>
   </div>
@@ -13,7 +13,7 @@
 <div class="row">
   <div class="col s12">
     <div class="card horizontal hoverable">
-      <div class="card-image" {{action 'click' model.contact}}>
+      <div class="card-image" {{action "click" model.contact}}>
         <img src={{model.contact.avatar}} alt="public/user.png">
       </div>
       <div class="card-stacked">

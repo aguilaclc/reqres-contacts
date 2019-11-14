@@ -7,7 +7,7 @@ export default Controller.extend({
     deleteContact(contact) {
       let url = `https://reqres.in/api/users/${contact.id}`;
 
-      fetch(url, { method: 'DELETE' }).then(payload => {
+      fetch(url, { method: 'DELETE' }).then(() => {
         M.toast({ html: 'Deleted!' });
       }).catch(() => {
         M.toast({ html: 'An error has ocurred' });
@@ -36,7 +36,7 @@ export default Controller.extend({
       fetch(url, {
         method: info.id ? 'PUT' : 'POST',
         body: JSON.stringify(info),
-      }).then(payload => {
+      }).then(() => {
         let elem = document.querySelector('#new-contact-modal');
         M.Modal.getInstance(elem).close();
 
