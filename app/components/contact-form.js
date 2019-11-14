@@ -19,5 +19,6 @@ export default Modal.extend({
     // XXX: Materialize recommends this in case inputs are prefilled, in order
     // to activate labels properly.
     next(() => M.updateTextFields());
+    this._super(...arguments);
   },
 });
