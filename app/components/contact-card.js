@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  classNames: ['contact-card', 'col', 's6', 'm4', 'l3'],
+  classNames: ['contact-card', 'col', 's12', 'm6', 'l4', 'xl3'],
 
   actions: {
     click() {
