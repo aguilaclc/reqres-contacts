@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col s12 center-align">
+    <h3>Lista de Contactos</h3>
+  </div>
+</div>
+
+<div class="row">
+  {{#each model.contacts as |contact|}}
+    <div class="col s6 m4 l3">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{contact.avatar}}">
+        </div>
+        <div class="card-content">
+          <h5 class="truncate">{{contact.first_name}} {{contact.last_name}}</h5>
+          <span class="truncate">{{contact.email}}</span>
+        </div>
+        <div class="card-action right-align">
+          <a>
+            {{material-icon 'mode_edit'}}
+          </a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
