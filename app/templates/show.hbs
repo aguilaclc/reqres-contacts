@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col s12 center-align">
+    <h3>Lista de Contactos</h3>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <div class="card horizontal">
+      <div class="card-image" {{action 'click' model.contact}}>
+        <img src={{model.contact.avatar}} alt="public/user.png">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h5>{{model.contact.first_name}} {{model.contact.last_name}}</h5>
+          <span>{{model.contact.email}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s12 center-align">
+    <a class="waves-effect waves-teal btn-large btn-flat" {{action 'goBack'}}>
+      Volver
+    </a>
+  </div>
+</div>
+
+
