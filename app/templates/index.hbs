@@ -12,10 +12,10 @@
 
 <div class="row">
   {{#each model.data as |contact|}}
-    {{contact-card contact=contact
-                   clickAction=(action "showDetails")
-                   deleteAction=(action "deleteContact")
-                   editAction=(action "openContactModal")}}
+    <ContactCard @contact={{contact}}
+                 @clickAction={{action "showDetails"}}
+                 @deleteAction={{action "deleteContact"}}
+                 @editAction={{action "openContactModal"}} />
   {{/each}}
 </div>
 
