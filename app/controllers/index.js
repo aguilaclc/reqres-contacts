@@ -9,7 +9,7 @@ export default Controller.extend({
     },
 
     showDetails(contact) {
-      this.transitionToRoute('show', contact);
+      this.transitionToRoute('show', contact.id);
     },
   },
 });
