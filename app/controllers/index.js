@@ -1,5 +1,5 @@
 import Controller from '@ember/controller';
-import EmberObject from '@ember/object';
+import EmberObject, { computed } from '@ember/object';
 
 export default Controller.extend({
   actions: {
@@ -12,4 +12,8 @@ export default Controller.extend({
       this.transitionToRoute('show', contact.id);
     },
   },
+
+  hasMorePages: computed('model.page', function () {
+    return this.get('model.page') < this.get('model.total_pages');
+  }),
 });
