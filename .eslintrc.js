@@ -15,6 +15,9 @@ module.exports = {
   env: {
     browser: true
   },
+  globals: {
+    M: true,
+  },
   rules: {
     'ember/no-jquery': 'error'
   },
