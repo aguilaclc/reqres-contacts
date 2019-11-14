@@ -6,6 +6,10 @@
     <h5 class="truncate">{{contact.first_name}} {{contact.last_name}}</h5>
   </div>
   <div class="card-action right-align">
+    <a {{action 'delete' contact}}>
+      {{material-icon "delete" alignment="left"}}
+    </a>
+
     <a {{action 'edit' contact}}>
       {{material-icon "mode_edit"}}
     </a>
