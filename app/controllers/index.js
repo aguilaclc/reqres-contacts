@@ -3,6 +3,10 @@ import EmberObject, { computed } from '@ember/object';
 
 export default Controller.extend({
   actions: {
+    deleteContact(contact) {
+      // call DELETE endpoint
+    },
+
     openContactModal(contact) {
       let contactInfo = EmberObject.create(contact);
       console.log(contactInfo)

@@ -8,6 +8,10 @@ export default Component.extend({
       this.clickAction(...arguments);
     },
 
+    delete() {
+      this.deleteAction(...arguments);
+    },
+
     edit() {
       this.editAction(...arguments);
     },
