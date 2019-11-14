@@ -12,6 +12,7 @@
 
 <div class="row">
   {{#each model.contacts as |contact|}}
-    {{contact-card contact=contact}}
+    {{contact-card contact=contact
+                   editAction=(action "openContactModal")}}
   {{/each}}
 </div>
