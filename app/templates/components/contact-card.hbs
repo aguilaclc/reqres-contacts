@@ -1,16 +1,16 @@
 <div class="card hoverable">
-  <div class="card-image" {{action "click" contact}}>
+  <div role="button" class="card-image" {{action "click" contact}}>
     <img src={{contact.avatar}} alt="public/user.png">
   </div>
   <div class="card-content">
     <h5 class="truncate">{{contact.first_name}} {{contact.last_name}}</h5>
   </div>
   <div class="card-action right-align">
-    <a {{action "delete" contact}}>
+    <a role="button" {{action "delete" contact}}>
       <MaterialIcon @name="delete" @alignment="left" />
     </a>
 
-    <a {{action "edit" contact}}>
+    <a role="button" {{action "edit" contact}}>
       <MaterialIcon @name="mode_edit" />
     </a>
   </div>

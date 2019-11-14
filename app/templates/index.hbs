@@ -1,5 +1,5 @@
 <div class="fixed-action-btn">
-  <a class="btn-floating btn-large red" {{action "openContactModal"}}>
+  <a role="button" class="btn-floating btn-large red" {{action "openContactModal"}}>
     <MaterialIcon @name="add" />
   </a>
 </div>
@@ -25,8 +25,8 @@
   </div>
 
   <div class="col s12 center-align">
-    <a class="waves-effect waves-teal btn-flat {{unless hasMorePages "disabled"}}"
-       {{action "loadNextPage"}}>
+    <a role="button" {{action "loadNextPage"}}
+       class="waves-effect waves-teal btn-flat {{unless hasMorePages "disabled"}}">
       Show more
     </a>
   </div>
